@@ -67,7 +67,7 @@ class GameManager:
     def __init__ (self):
         self.myWord = Word()
         self.player = Player()
-        print ("Le jeux commence : ")
+        print ("Le jeux commence:")
         print (self.myWord)
         
     def __victory__(self):
@@ -86,14 +86,14 @@ class GameManager:
             return False
     
     def __askLetter__(self):
-        myLetter = raw_input("Entrer une lettre :")   
+        myLetter = raw_input("Entrer une lettre: ")   
         while (len(myLetter)!=1 or myLetter in self.myWord.goodLetter):
             if len(myLetter)!=1:
-                print("Vous ne devez entrer qu'une lettre")
-                myLetter = raw_input("Entrer une lettre")
+                print("Vous ne devez entrer qu'une lettre!")
+                myLetter = raw_input("Entrer une lettre: ")
             if (myLetter in self.myWord.goodLetter):
-                print("Vous avez deja entree cette lettre")
-                myLetter = raw_input("Entrer une lettre")
+                print("Vous avez deja entree cette lettre!")
+                myLetter = raw_input("Entrer une lettre: ")
         return myLetter
     
     def __putLetter__(self, aLetter):
